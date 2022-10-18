@@ -1,0 +1,172 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block header-content %}
+
+{% endblock header-content %}
+
+
+
+{% block main-content %}
+<!-- <div class="container-fluid bg-dark m-0 p-0" style="">
+    <img style="height: 100%; width: 100%; object-fit: contain;" class="" src="{% static 'my_app/images/devotional-detail.jpg' %}"> 
+    <div class="row my-auto">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <h3 style="font-family: 'Playfair Display', serif;">Morning Dew Devotional</h3>
+        </div>
+
+    </div>
+
+</div> -->
+<!-- <div class="container-fluid devotional-header bg-dark" style="height: 80vh;">
+    <div class="row  m-auto">
+        <div class=" col-12 col-sm-12 col-md-8 col-lg-7  m-auto" style="padding-top: 150px; padding-bottom: 110px;">
+            <h1 class="header-text text-center text-white" style="font-weight: bolder; color: white; z-index: 20;">{{devotional.title}}</h1>
+                <p class=" white-text mb-4 text-center" >God's work daily can transform your life into his very image. 
+                    Our Daily Devotional is set to build Believers into a place of intimacy and yieldedness to God </p>
+
+
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="container-fluid gradient-container "  >
+    <div class="row m-auto grooming-cont"  >
+        <div class="col-12 m-auto" >
+            <div class="mt-4 mb-2">
+                <h1 class="sub-bold-text m-auto mb-4 white-text text-center" >{{devotional.title.upper}}</h1>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 mt-4 m-auto text-center white-text">
+                <p class="m-auto white-text"> God's word daily can transform your life into his very image. 
+                    Our Daily Devotional is set to build Believers into a place of intimacy and yieldedness to God </p>
+
+            </div>
+            <div class="mt-4 text-center">
+                <a href="#main-content" class="button-large-dark " >Read Devotional</a>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+</div>
+
+
+<div class="container" id="main-content" style="margin-top: 70px;" >
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-10 col-lg-10 m-auto" >
+            <p class=" pt-2" style="border-bottom: 3px solid #3c1381; font-weight: bold; font-size: 18px;">
+                DAILY DEVOTIONAL | <span style="color: #3c1381;">{{devotional.title}}</span></p>
+            <p class="" style="font-size: 18px; font-weight: bold;">{{devotional.date}}</p>
+            <div class="p-4 col-12 col-sm-12 col-md-6 col-lg-6 bg-purple mb-3">
+                {{devotional.scripture|safe}}
+
+            </div>
+            <div >
+                {{devotional.body|safe}}
+            </div>
+            <div>
+                <p style="font-weight: bold; font-size: 22px; font-family: 'Playfair Display', serif;" class="purple-color" >PRAYER TIME</p>
+                <div class="p-4 col-11 col-sm-11 col-md-7 col-lg-7 bg-purple mb-3">
+                    {{devotional.prayer}}
+                </div>
+                <p style="font-weight: bold; font-size: 22px; font-family: 'Playfair Display', serif;" class="purple-color" >FURTHER STUDY</p>
+                <div class="p-4 col-11 col-sm-11 col-md-5 col-lg-5 bg-purple mb-3">
+                    {{devotional.further_study}}
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+</div>
+<div class="container mt-4" style="">
+    <div class="col-12 m-auto text-center">
+        <p class="sub-bold-text text-center">Other Relevant Devotionals</p>
+    </div>
+    <div class="row g-0 slide-div single-item" style=" position: relative !important;">
+        {% for devotional in all_devotional %}
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 mt-3 d-flex align-items-stretch" >
+
+            <div class="card mt-4 mb-4" style="width: 100;">
+                <div class="card-img-divz" style="overflow: hidden; position: relative;">
+                    <img class="card-img-top zoom" src="{{ devotional.image.url }}" alt="Card image cap">
+    
+                </div>
+                <div class="card-body">
+                    <p class="card-title post-heading" style="font-weight: bold;">{{devotional.title}}</p>
+                    <p class="card-text post-body" style="font-weight: bold;">{{devotional.date}}</p>
+    
+                    <div >
+                        <a href="#" class="btn btn-sm btn-outline-secondary mb-2 ">Read
+                            Devotional</a>
+                    </div>
+                </div>
+    
+             </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock main-content %}
+
+
+{% block js %}
+<script>
+    $(document).ready(function(){
+
+        $('.single-item').slick({
+            dots: true,
+            useTransform: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            cssEase: 'ease-out',
+
+  responsive: [
+
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+        });
+    })
+
+    
+</script>    
+{% endblock js %}
+    

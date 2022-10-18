@@ -1,0 +1,102 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block header-content %}
+
+{% endblock header-content %}
+
+
+
+{% block main-content %}
+
+<div style="margin-top: 120px;">
+
+</div>
+
+<div class="container">
+    <div class="row m-auto">
+        <div class="m-auto col-12 col-sm-12 col-md-12 col-lg-12">
+
+            <form method="POST" class="p-4">
+                <p class="small  text-capitalize">Enter your Registered Email Address and Password</p>
+                            {% csrf_token %}
+                          <div class="form-group " id="inputUsername">
+    
+                            <!-- {{ form|crispy }} -->
+                          </div>
+                    {% if messages %}
+                            {% for message in messages %}
+                        <div class="alert alert-{{message.tags }}">
+                            {{ message }}
+                        </div>
+                            {% endfor %}
+                            {% endif %}
+                    <button  class="button-mini text-capitalize text-center mb-2 mt-4" type="submit">Login</button>
+                          
+    
+                        </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+{% endblock main-content %}
+
+
+{% block js %}
+<script>
+    $(document).ready(function(){
+
+        $('.single-item').slick({
+            dots: true,
+            useTransform: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            cssEase: 'ease-out',
+
+  responsive: [
+
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+        });
+    })
+
+    
+</script>    
+{% endblock js %}
+    

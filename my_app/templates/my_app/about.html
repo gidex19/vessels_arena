@@ -1,0 +1,126 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block header-content %}
+
+<!-- <div class="container-fluid ">
+    <div class="row bg-dark bg-dark">
+        <div class=" col-12 col-sm-12 col-md-8 col-lg-7  m-auto" style="padding-top: 150px; padding-bottom: 110px;">
+            <h1 class="header-text text-center" style="font-weight: bolder; color: white; z-index: 20;"> About Us</h1>
+                <p class=" white-text mb-4 text-center" >Bringing You Into A Place of Intimacy with God.</p>
+
+
+        </div>
+
+    </div>
+
+</div> -->
+
+<div style="margin-top: 150px;">
+
+</div>
+<div class="container-fluid">
+    <div class="row" style="margin-top: 60px;">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 m-auto" style="margin-top: 60px;">
+            <div class="row m-auto ">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-4 m-auto mb-3 mt-4"  style="height: 90vh;">
+                    <div>
+                        <img src="{% static 'my_app/images/men.jpg' %}" 
+                        style="border-radius: 12px; width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div>
+                        <p class="header-p mt-2" style="color: limegreen">HISTORY</p>
+                        <p >
+                            The cause for which I live is built on my relationship with jesus. 
+                            I first gave my life to Christ in 1988,in the Old scripture Union 
+                            I got baptized in 1992, in Living Word Ministries.... 
+                        </p>
+                        <a href="{% url 'history' %}" class="button-small-color " >Read more.. <span><i class="white-text fas fa-long-arrow-alt-right"></i></span></a>
+        
+                    </div>
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 m-auto mb-3 mt-4"  style="height: 90vh;">
+                        <div>
+                            <img src="{% static 'my_app/images/vision.jpg' %}" 
+                            style="border-radius: 12px; width: 100%; height: 200px; object-fit: cover;">
+                        </div>
+                        <div>
+                            <p class="header-p mt-2" style="color: limegreen">VISION/MISSION</p>
+                        <p >
+                            The divine visitation of Miss Kathryn Kuhlman caused quite a stir in
+                            me till I stumbled into Hebrew 12:23 “…the general assembly and church
+                            of the firstborn who are registered...  
+                            </p>
+                            <a href="{% url 'vision' %}" class="button-small-color " >Read more.. <span><i class="white-text fas fa-long-arrow-alt-right"></i></span></a>
+            
+                        </div>
+                        </div>
+        
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 m-auto mb-3 mt-4"  style="height: 90vh;">
+                            <div>
+                                <img src="{% static 'my_app/images/shield.jpg' %}" 
+                                style="border-radius: 12px; width: 100%; height: 200px; object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="header-p mt-2" style="color: limegreen">THE MESSAGE</p>
+                        <p >
+                            It is important we understand from the popular benediction
+                            in 2nd Cor. 13:14 that our dealings with the Father is
+                            based on love-His nature and weighing scale (1 John 4:8) 
+                        </p>
+                                <a href="{% url 'message' %}" class="button-small-color " >Read more.. <span><i class="white-text fas fa-long-arrow-alt-right"></i></span></a>
+                
+                            </div>
+                            </div>
+        
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid parallax2">
+    <div class="row h-100">
+        <div class="col-12 col-sm-12 col-md-9 col-lg-9 text-center m-auto p-4" >
+            <p class="text-left green-text" ><span><i class="fas fa-quote-left fa-3x"></i></span></p>
+            <p class="text-center sub-bold-text white-text quote-p" >
+                I am the true vine, and my Father is the husbandman.
+                Every branch in me that beareth not fruit he taketh away: and every branch that beareth fruit,
+                 he purgeth it, that it may bring forth more fruit.</p>
+                 <hr class="text-center m-auto" style="width: 10%; height: 2px; color: limegreen; margin: 0; opacity: 1;" >
+            <p class="mt-4 text-center white-text " style="font-weight: 600; font-size: 17px;">John 15: 1-2</p>     
+            <p class=" text-center white-text " style="font-size: 12px;">NEW KING JAMES VERSION</p>     
+            <p class="text-right green-text" ><span><i class="fas fa-quote-right fa-3x"></i></span></p>
+
+                
+                </div>
+
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row" style="background-color: #3c1381;" >
+        <div class="col-12 p-4">
+            <div class="align-items-center" style="margin-top: 90px; margin-bottom: 90px;">
+                <p class="small-p text-center white-text">BORN AGAIN  || <span style="color: limegreen; font-weight: 500;"> JOIN THE FAMILY</span></p>
+            <h2 class="sub-header text-center white-text"> The Salvation Prayer</h2>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 m-auto">
+
+                <p class="white-text text-center">
+                    Dear Lord Jesus, I know that I am a sinner, and I ask for Your forgiveness.
+                     I believe You died for my sins and rose from the dead. I turn from my sins and
+                     invite You to come into my heart and life. I want to trust and follow You as my Lord and Savior.
+                </p>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock header-content %}
+
+
+

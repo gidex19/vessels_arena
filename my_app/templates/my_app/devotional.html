@@ -1,0 +1,75 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block header-content %}
+
+{% endblock header-content %}
+
+
+
+{% block main-content %}
+<!-- <div class="container-fluid devotional-header bg-dark" >
+    <div class="row  m-auto">
+        <div class=" col-12 col-sm-12 col-md-8 col-lg-7  m-auto" style="padding-top: 150px; padding-bottom: 110px;">
+            <h1 class="header-text text-center" style="font-weight: bolder; color: white; z-index: 20;">Daily Devotional</h1>
+                <p class=" white-text mb-4 text-center" >God's work daily can transform your life into his very image. 
+                    Our Daily Devotional is set to build Believers into a place of intimacy and yieldedness to God </p>
+
+
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="container-fluid gradient-container " >
+    <div class="row m-auto grooming-cont"  >
+        <div class="col-12 m-auto" >
+            <div class="mt-4 mb-2">
+                <h1 class="sub-bold-text m-auto mb-4 white-text text-center" >Today's Devotional</h1>
+            </div>
+            <div class="col-12 col-sm-12 col-md-7 col-lg-7 mt-4 m-auto text-center white-text">
+                <p class="m-auto white-text"> God has a word for you. He is ever ready to commune with you, 
+                    if only you can create out time for him too. Make it a lifestyle to start your day with God.</p>
+
+            </div>
+            <div class="mt-4 text-center">
+                <a href="{% url 'devotional' %}4" class="button-large-dark " >Read Today's Devotional</a>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+</div>
+<div class="container">
+    <div class="row" style=" margin-top: 120px;">
+        {% for devotional in all_devotional %}
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 mt-3 d-flex align-items-stretch ">
+         <div class="card mt-4 mb-4" style="width: 100%; ">
+            <div class="card-img-div" style="overflow: hidden; position: relative;">
+                <img class="card-img-top zoom" src="{{ devotional.image.url }}" >
+
+            </div>
+            <div class="card-body" >
+                <p class="card-title post-heading" style="font-weight: bold;">{{devotional.title}}</p>
+                <p class="card-text post-body" style="font-weight: bold;">{{devotional.date}}</p>
+
+                <div >
+                    <a style="font-size: 12px;" href="{% url 'devotional_detail' devotional.id %}" class="btn btn-sm btn-outline-secondary  mb-2 ">Read
+                        Devotional</a>
+                </div>
+            </div>
+
+         </div>
+        </div> 
+        {% endfor %}
+        
+        
+
+    </div>
+
+</div>
+
+{% endblock main-content %}

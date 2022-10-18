@@ -1,0 +1,155 @@
+{% extends 'my_app/base.html' %}
+{% load static %}
+
+{% block header-content %}
+
+<!-- <header class="branch-header">
+    <img class="bg-img" src="{% static 'my_app/images/header.jpg' %}">
+<section class="m-auto col-10 col-sm-10 col-md-5 col-lg-5 " style="margin-top: -70vh;">
+<h1 class="header-text " style="font-weight: bolder; color: black; z-index: 20;"> Locations & Branches</h1>
+<p class="header-p white-text mb-4" >Our Various Church Centres across Nigeria</p>
+<div class="mt-4">
+<a class="button-large-dark " >Contact Us<span><i class="white-text fas fa-long-arrow-alt-right"></i></span></a>
+</div>
+
+</section>
+</header> -->
+<div class="container-fluid location-pg-header ">
+    <div class="row ">
+        <div class=" col-12 col-sm-12 col-md-8 col-lg-7  m-auto" style="padding-top: 150px; padding-bottom: 110px;">
+            <h1 class="header-text text-center" style="font-weight: bolder; color: white; z-index: 20;"> Locations & Branches</h1>
+                <p class="header-p white-text mb-4 text-center" >Our Various Church Centres across Nigeria</p>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock header-content %}
+
+
+{% block main-content %}
+<div class="container mb-4" style="margin-top: 60px;">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-4 mb-4 m-auto">
+            <div class="p-2">
+                <h2 class="sub-header">Find a Location Near You</h2>
+                <hr style="width: 30%; height: 2px; color: #3c1381; margin: 10px 0; " >
+                <p>
+                    We would love to have you worship with us in any of our church centres across Nigeria. We have branches 
+                    in different States of the country. Find your location and better understand the order of service.
+                </p>
+                <div class="mt-4">
+
+                    <a class="button-large-dark" >Contact Us <span><i class="ml-2 white-text fas fa-long-arrow-alt-right"></i></span></a>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 mt-4 mb-4 m-auto">
+            <div class="row ">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-4">
+                    <div>
+                        <span><i style="color: #3c1381;"  class="fas fa-map-marker-alt fa-4x"></i></span>
+                    </div>
+                    <div class="mt-2">
+                        <p class="sub-header m-0 p-0" style="font-weight: bolder; font-size: 20px;">Anambra - Headquarters</p>
+                        <p class="m-0 p-1">Sundays @ 8:00am</p>
+                        <p class="m-0 p-1">Wednesdays @ 5:00pm</p>
+                        <!-- <p class="m-0 p-1">27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria</p> -->
+                        <p class="m-0 p-1"><span><i style="color: #3c1381;" class="fas fa-phone-alt"></i></span> +234 9123 322 2333</p>    
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-4">
+                    <div>
+                        <span><i style="color: #3c1381;"  class="fas fa-map-marker-alt fa-4x"></i></span>
+                    </div>
+                    <div class="mt-2">
+                        <p class="sub-header m-0 p-0" style="font-weight: bolder; font-size: 20px;">Port Harcourt</p>
+                        <p class="m-0 p-1">Sundays @ 8:00am</p>
+                        <p class="m-0 p-1">Wednesdays @ 5:00pm</p>
+                        <!-- <p class="m-0 p-1">27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria</p> -->
+                        <p class="m-0 p-1"><span><i style="color: #3c1381;" class="fas fa-phone-alt"></i></span> +234 9123 322 2333</p>    
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-4">
+                    <div>
+                        <span><i style="color: #3c1381;"  class="fas fa-map-marker-alt fa-4x"></i></span>
+                    </div>
+                    <div class="mt-2">
+                        <p class="sub-header m-0 p-0" style="font-weight: bolder; font-size: 20px;">Asaba</p>
+                        <p class="m-0 p-1">Sundays @ 8:00am</p>
+                        <p class="m-0 p-1">Wednesdays @ 5:00pm</p>
+
+                        <!-- <p class="m-0 p-1">27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria</p> -->
+                        <p class="m-0 p-1"><span><i style="color: #3c1381;" class="fas fa-phone-alt"></i></span> +234 9123 322 2333</p>    
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-4">
+                    <div>
+                        <span><i style="color: #3c1381;"  class="fas fa-map-marker-alt fa-4x"></i></span>
+                    </div>
+                    <div class="mt-2">
+                        <p class="sub-header m-0 p-0" style="font-weight: bolder; font-size: 20px;">Benin</p>
+                        <p class="m-0 p-1">Sundays @ 8:00am</p>
+                        <p class="m-0 p-1">Wednesdays @ 5:00pm</p>
+
+                        <!-- <p class="m-0 p-1">27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria</p> -->
+                        <p class="m-0 p-1"><span><i style="color: #3c1381;" class="fas fa-phone-alt"></i></span> +234 9123 322 2333</p>    
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-4">
+                    <div>
+                        <span><i style="color: #3c1381;"  class="fas fa-map-marker-alt fa-4x"></i></span>
+                    </div>
+                    <div class="mt-2">
+                        <p class="sub-header m-0 p-0" style="font-weight: bolder; font-size: 20px;">Yenagoa</p>
+                        <p class="m-0 p-1">Sundays @ 8:00am</p>
+                        <p class="m-0 p-1">Wednesdays @ 5:00pm</p>
+
+                        <!-- <p class="m-0 p-1">27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria</p> -->
+                        <p class="m-0 p-1"><span><i style="color: #3c1381;" class="fas fa-phone-alt"></i></span> +234 9123 322 2333</p>    
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-6 mt-4">
+                    <div>
+                        <span><i style="color: #3c1381;"  class="fas fa-map-marker-alt fa-4x"></i></span>
+                    </div>
+                    <div class="mt-2">
+                        <p class="sub-header m-0 p-0" style="font-weight: bolder; font-size: 20px;">Uyo</p>
+                        <p class="m-0 p-1">Sundays @ 8:00am</p>
+                        <p class="m-0 p-1">Wednesdays @ 5:00pm</p>
+
+                        <!-- <p class="m-0 p-1">27 Oby Okoli Avenue, Awka
+                            Anambra, Nigeria</p> -->
+                        <p class="m-0 p-1"><span><i style="color: #3c1381;" class="fas fa-phone-alt"></i></span> +234 9123 322 2333</p>    
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock main-content %}
